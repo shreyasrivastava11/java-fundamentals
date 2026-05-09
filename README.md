@@ -4,8 +4,6 @@ This repository contains my Java learning journey and practice code covering cor
 
 The goal of this repository is to strengthen Java fundamentals through hands-on coding and concept-based learning.
 
----
-
 ## Topics Covered
 
 ### 🔹 Object-Oriented Programming (OOPs)
@@ -56,8 +54,6 @@ The goal of this repository is to strengthen Java fundamentals through hands-on 
 * Functional Interfaces
 * Optional Class
 
----
-
 ## Repository Structure
 
 ```bash
@@ -72,8 +68,6 @@ java-fundamentals/
 └── README.md
 ```
 
----
-
 ## Purpose of This Repository
 
 * Improve Java fundamentals
@@ -82,16 +76,12 @@ java-fundamentals/
 * Learn Git & GitHub workflow
 * Document my learning journey
 
----
-
 ## Tech Stack
 
 * Java
 * Git
 * GitHub
 * VS Code / IntelliJ IDEA
-
----
 
 ## Note
 
