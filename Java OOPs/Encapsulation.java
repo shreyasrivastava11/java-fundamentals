@@ -2,35 +2,45 @@
 The data can only be accessed or modified through controlled public methods like getters and setters. */
 
 
-class Employee {
+cclass Employee {
 
-    // private variables (data hiding)
-    private String name;
+    // ================= PRIVATE =================
+    // Accessible only inside same class
     private int salary;
 
-    // public setter methods
-    public void setName(String name) {
-        this.name = name;
-    }
+    // Private method
+    private void setSalary(int salary) {
 
-    public void setSalary(int salary) {
-
-        // validation
-        if(salary > 0) {
+        if (salary > 0) {
             this.salary = salary;
         }
-        else {
-            System.out.println("Invalid Salary");
-        }
     }
 
-    // public getter methods
-    public String getName() {
-        return name;
+    // ================= PROTECTED =================
+    // Accessible inside same package + child classes
+    protected void updateSalary(int salary) {
+
+        // calling private method inside same class
+        setSalary(salary);
+
+        System.out.println("Salary Updated");
     }
 
+    // ================= PUBLIC =================
+    // Accessible from everywhere
     public int getSalary() {
         return salary;
+    }
+}
+
+
+// Child class
+class Manager extends Employee {
+
+    void manageEmployee() {
+
+        // accessing protected method
+        updateSalary(70000);
     }
 }
 
@@ -39,13 +49,23 @@ public class Main {
 
     public static void main(String[] args) {
 
-        Employee emp = new Employee();
+        Manager manager = new Manager();
 
-        // accessing data through methods
-        emp.setName("Shreya");
-        emp.setSalary(50000);
+        // accessing protected method through child class method
+        manager.manageEmployee();
 
-        System.out.println("Name: " + emp.getName());
-        System.out.println("Salary: " + emp.getSalary());
+        // accessing public method
+        System.out.println("Salary: " + manager.getSalary());
+
+        // ================= NOT ALLOWED =================
+
+        // manager.salary = 50000;
+        // salary is private
+
+        // manager.setSalary(50000);
+        // private method
+
+        // manager.updateSalary(50000);
+        // protected method not directly accessible here
     }
 }
