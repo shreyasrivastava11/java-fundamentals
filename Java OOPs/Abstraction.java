@@ -5,7 +5,7 @@ The user only knows what action can be performed, not how it is implemented inte
 Similarly, while riding a scooty, the rider only uses the controls and is not concerned with the internal engine mechanism. This concept is called abstraction. */
 
 
-// =================Abstraction class======================
+// ================= Abstraction class ======================
 abstract class Payment {
 
     //Non-abstract method
@@ -54,7 +54,7 @@ public class Main {
 
 
 
-// ==================Abstraction Interface====================
+// ================== Abstraction Interfac e====================
 interface Payment {
 
     // Interface method (only declaration)
